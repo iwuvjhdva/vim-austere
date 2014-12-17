@@ -1,7 +1,7 @@
 vim-austere
 ===========
 
-Austere Vim config with CtrlP and Neocomplete with mostly no installation:
+Austere Vim config with CtrlP and Neocomplete with mostly no installation, ideal for using on remote servers:
 
 ```bash
 $ cd && git clone --recursive https://github.com/iwuvjhdva/vim-austere.git .vim
