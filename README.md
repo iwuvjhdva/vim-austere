@@ -4,7 +4,7 @@ vim-austere
 Austere Vim config with CtrlP and Neocomplete that almost doesn't require installation:
 
 ```bash
-$ cd && git clone https://github.com/iwuvjhdva/vim-austere.git .vim
+$ cd && git clone --recursive https://github.com/iwuvjhdva/vim-austere.git .vim
 ```
 
 Plugins
