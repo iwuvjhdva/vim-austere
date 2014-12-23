@@ -60,11 +60,9 @@ set guioptions-=r  "remove right-hand scroll bar
 set guifont=Monospace\ 12
 set clipboard=unnamedplus
 
-"if has("gui_running") 
-"    set spell spelllang=en_us
-"endif
-
-set paste
+if has("gui_running") 
+    set paste
+endif
 
 " Local leader key
 let maplocalleader = "\<M-x>"
