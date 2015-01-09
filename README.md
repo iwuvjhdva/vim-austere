@@ -19,4 +19,5 @@ Plugins
 * tcomment - Comment your code by selecting a block and pressing gc
 * vim-misc (required by vim-notes)
 * vim-python-pep8-indent - PEP8 indentation
+* html5.vim - HTML5 syntax support
 * vim-unimpaired - No idea why I have it...
