@@ -43,7 +43,7 @@ set softtabstop=4
 set smarttab
 set expandtab
 
-set mouse=a
+set mouse=
 
 set ruler
 set number
