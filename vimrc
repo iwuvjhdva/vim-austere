@@ -43,8 +43,6 @@ set softtabstop=4
 set smarttab
 set expandtab
 
-set mouse=
-
 set ruler
 set number
 
@@ -62,6 +60,7 @@ set clipboard=unnamedplus
 
 if has("gui_running") 
     set paste
+    set mouse=a
 endif
 
 " Local leader key
