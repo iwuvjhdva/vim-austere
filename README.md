@@ -21,4 +21,5 @@ Plugins
 * vim-python-pep8-indent - PEP8 indentation
 * html5.vim - HTML5 syntax support
 * vim-javascript - Proper JavaScript indentation
+* vim-go - Go syntax highlighting and development stuff
 * vim-unimpaired - No idea why I have it...
