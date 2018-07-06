@@ -22,4 +22,6 @@ Plugins
 * html5.vim - HTML5 syntax support
 * vim-javascript - Proper JavaScript indentation
 * vim-go - Go syntax highlighting and development stuff
-* vim-unimpaired - No idea why I have it...
+* vim-clojure-static - Clojure syntax and indentation
+* rainbow_parentheses - Better rainbow parentheses for Clojure
+* vim-unimpaired - No idea why I have it
