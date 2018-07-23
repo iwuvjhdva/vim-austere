@@ -56,7 +56,15 @@ set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 
 set guifont=Monospace\ 12
-set clipboard=unnamedplus
+
+" yank to clipboard
+if has("clipboard")
+    set clipboard=unnamed " copy to the system clipboard
+
+    if has("unnamedplus") " X11 support
+        set clipboard+=unnamedplus
+    endif
+endif
 
 if has("gui_running") 
     set paste
