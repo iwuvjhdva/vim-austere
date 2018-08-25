@@ -40,9 +40,6 @@
 [submodule "bundle/vim-go"]
 	path = bundle/vim-go
 	url = https://github.com/fatih/vim-go
-[submodule "bundle/vim-clojure-static"]
-	path = bundle/vim-clojure-static
-	url = https://github.com/guns/vim-clojure-static.git
 [submodule "bundle/scvim"]
 	path = bundle/scvim
 	url = https://github.com/supercollider/scvim.git
