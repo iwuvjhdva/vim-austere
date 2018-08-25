@@ -28,9 +28,6 @@
 [submodule "bundle/vim-misc"]
 	path = bundle/vim-misc
 	url = https://github.com/xolox/vim-misc.git
-[submodule "bundle/neocomplete.vim"]
-	path = bundle/neocomplete.vim
-	url = https://github.com/Shougo/neocomplete.vim.git
 [submodule "bundle/html5.vim"]
 	path = bundle/html5.vim
 	url = https://github.com/othree/html5.vim.git
@@ -49,3 +46,12 @@
 [submodule "bundle/scvim"]
 	path = bundle/scvim
 	url = https://github.com/supercollider/scvim.git
+[submodule "bundle/vim-jsx"]
+	path = bundle/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git
+[submodule "bundle/deoplete.nvim"]
+	path = bundle/deoplete.nvim
+	url = https://github.com/Shougo/deoplete.nvim.git
+[submodule "bundle/vim-gitgutter"]
+	path = bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git

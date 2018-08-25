@@ -12,7 +12,7 @@ Plugins
 * ctrlp.vim - Quick files navigation, press Ctrl+p
 * delimitMate - Auto-completion for quotes, brackets etc
 * editorconfig - Support for uniform project-specific editor configuration format
-* neocomplete.vim - Autocompletion
+* deoplete - Autocompletion
 * notes - Create a new note with :Note
 * snipmate.vim - Add a Python breakpoint with br\<Tab\>
 * syntastic.git - You may want to install syntax checkers like flake8 or jshint for realtime syntax errors highlight
@@ -23,4 +23,5 @@ Plugins
 * vim-javascript - Proper JavaScript indentation
 * vim-go - Go syntax highlighting and development stuff
 * vim-clojure-static - Clojure syntax and indentation
+* vim-gitgutter - Show git diff in the gutter
 * vim-unimpaired - No idea why I have it
