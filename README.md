@@ -15,7 +15,7 @@ Plugins
 * deoplete - Autocompletion
 * notes - Create a new note with :Note
 * snipmate.vim - Add a Python breakpoint with br\<Tab\>
-* syntastic.git - You may want to install syntax checkers like flake8 or jshint for realtime syntax errors highlight
+* neomake - You may want to install syntax checkers like flake8 or eslint for realtime syntax errors highlight
 * tcomment - Comment your code by selecting a block and pressing gc
 * vim-misc (required by vim-notes)
 * vim-python-pep8-indent - PEP8 indentation

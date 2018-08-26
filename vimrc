@@ -108,22 +108,15 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 " nnoremap <M-q>' gewi'<Esc>ea'<Esc>
 " nnoremap <M-q>d daW"=substitute(@@,"'\\\|\"","","g")<CR>P
 
-" syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" Neomake
+let g:neomake_open_list = 2
+let g:neomake_javascript_eslint_exe = $PWD .'/node_modules/.bin/eslint'
+call neomake#configure#automake('nrwi', 500)
 
-let g:syntastic_python_checkers=['flake8']
-let g:syntastic_python_flake8_exe='/usr/local/bin/flake8'
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exe = './node_modules/eslint/bin/eslint.js -c .eslintrc'
+" let g:syntastic_python_checkers=['flake8']
+" let g:syntastic_python_flake8_exe='/usr/local/bin/flake8'
+" let g:syntastic_javascript_eslint_exe = './node_modules/eslint/bin/eslint.js -c .eslintrc'
 " let g:syntastic_javascript_eslint_exe = 'npm run lint'
-
-cmap E<CR> Explore<CR>
 
 " CtrlP
 let g:ctrlp_working_path_mode = 0
