@@ -4,7 +4,7 @@ vim-austere
 Austere Vim config with CtrlP and Neocomplete with mostly no installation, ideal for using on remote servers:
 
 ```bash
-$ cd && git clone --recursive https://github.com/iwuvjhdva/vim-austere.git .vim
+cd && git clone --recursive https://github.com/iwuvjhdva/vim-austere.git .vim
 ```
 
 Plugins
@@ -32,4 +32,6 @@ Ctags on Mac OS X
 -----
 Use the following command to install Universal Ctags on Mac OS X:
 
-```brew install --HEAD universal-ctags/universal-ctags/universal-ctags```
+```bash
+brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+```
