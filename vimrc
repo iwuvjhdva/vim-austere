@@ -103,6 +103,9 @@ set wildignore+=**/dist/**
 " Temporarily disable search highlighting on Space
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
+" Search visually selected text
+vnoremap // y/<C-R>"<CR>
+
 " Quote and unquote words
 " nnoremap <M-q>" gewi"<Esc>ea"<Esc>
 " nnoremap <M-q>' gewi'<Esc>ea'<Esc>
@@ -111,7 +114,7 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 " Neomake
 let g:neomake_open_list = 2
 let g:neomake_javascript_eslint_exe = $PWD .'/node_modules/.bin/eslint'
-call neomake#configure#automake('nrwi', 500)
+call neomake#configure#automake('rw')
 
 " let g:syntastic_python_checkers=['flake8']
 " let g:syntastic_python_flake8_exe='/usr/local/bin/flake8'
@@ -124,3 +127,7 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|bower_components'
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
+
+
+" Tagbar
+nmap <F8> :TagbarToggle<CR>

@@ -25,3 +25,5 @@ Plugins
 * vim-clojure-static - Clojure syntax and indentation
 * vim-gitgutter - Show git diff in the gutter
 * vim-unimpaired - No idea why I have it
+* tagbar - Press F8 to toggle file tags
+* vim-gutentags - background tags generation
