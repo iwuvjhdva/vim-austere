@@ -28,7 +28,8 @@ Plugins
 * tagbar - Press F8 to toggle file tags
 * vim-gutentags - background tags generation
 
-Ctags
+Ctags on Mac OS X
 -----
 Use the following command to install Universal Ctags on Mac OS X:
+
 ```brew install --HEAD universal-ctags/universal-ctags/universal-ctags```
