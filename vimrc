@@ -43,6 +43,9 @@ set softtabstop=4
 set smarttab
 set expandtab
 
+set splitright
+set splitbelow
+
 set ruler
 set number
 
