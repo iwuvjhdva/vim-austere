@@ -24,6 +24,7 @@ if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
 
+" Basic configuration
 if has("syntax")
   syntax on
 endif
@@ -54,6 +55,19 @@ set showmatch
 
 set hlsearch
 
+" Persistent undo
+set undofile
+set undodir=$HOME/.vim/.undo
+set undolevels=1000
+set undoreload=10000
+
+" Buffers
+nnoremap gp :bp<CR>
+nnoremap gn :bn<CR>
+nnoremap gl :ls<CR>:b<Space>
+nnoremap gd :bp<bar>bd#<CR>
+
+" GUI
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
@@ -134,3 +148,21 @@ let g:deoplete#enable_at_startup = 1
 
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
+
+" Gutentags
+set tags=./.tags,.tags;
+
+let g:gutentags_ctags_tagfile = '.tags'
+let g:gutentags_file_list_command = {
+      \ 'markers': {
+      \ '.git': 'git ls-files',
+      \ },
+      \ }
+let g:gutentags_generate_on_new = 1
+
+" closetag.vim
+let g:closetag_filetypes = 'html,xhtml,xml,javascript.jsx'
+
+" vim-javascript
+" let g:jsx_ext_required = 1 
+" let g:javascript_plugin_flow = 1
