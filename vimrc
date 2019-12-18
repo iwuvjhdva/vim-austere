@@ -131,6 +131,9 @@ vnoremap // y/<C-R>"<CR>
 " Neomake
 let g:neomake_open_list = 2
 let g:neomake_javascript_eslint_exe = $PWD .'/node_modules/.bin/eslint'
+let g:neomake_python_enabled_makers = ['flake8']
+
+let g:neomake_python_flake8_exe = '/usr/local/bin/flake8'
 call neomake#configure#automake('rw')
 
 " let g:syntastic_python_checkers=['flake8']
@@ -166,3 +169,6 @@ let g:closetag_filetypes = 'html,xhtml,xml,javascript.jsx'
 " vim-javascript
 " let g:jsx_ext_required = 1 
 " let g:javascript_plugin_flow = 1
+
+" neovim-fuzzy
+nnoremap <C-p> :FuzzyOpen<CR>
