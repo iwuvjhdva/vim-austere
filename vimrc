@@ -29,7 +29,7 @@ if has("syntax")
   syntax on
 endif
 
-colorscheme slate
+colorscheme gruvbox
 
 set backspace=indent,eol,start
 set listchars=tab:˛\ ,trail:┈
@@ -132,8 +132,10 @@ vnoremap // y/<C-R>"<CR>
 let g:neomake_open_list = 2
 let g:neomake_javascript_eslint_exe = $PWD .'/node_modules/.bin/eslint'
 let g:neomake_python_enabled_makers = ['flake8']
-
 let g:neomake_python_flake8_exe = '/usr/local/bin/flake8'
+
+let g:neomake_java_enabled_makers = []
+
 call neomake#configure#automake('rw')
 
 " let g:syntastic_python_checkers=['flake8']
@@ -172,3 +174,44 @@ let g:closetag_filetypes = 'html,xhtml,xml,javascript.jsx'
 
 " neovim-fuzzy
 nnoremap <C-p> :FuzzyOpen<CR>
+
+" cscope
+if has("cscope")
+    set csprg=/usr/local/bin/cscope
+    set csto=0
+    set cst
+    " add any database in current directory
+    if filereadable("cscope.out")
+        silent cs add cscope.out
+    " else add database pointed to by environment
+    elseif $CSCOPE_DB != ""
+        silent cs add $CSCOPE_DB
+    endif
+
+    map g<C-]> :cs find 3 <C-R>=expand("<cword>")<CR><CR>
+    map g<C-\> :cs find 0 <C-R>=expand("<cword>")<CR><CR>
+endif
+
+
+" GitGutter
+nmap ghp <Plug>(GitGutterPreviewHunk)
+
+" Jdtls
+nnoremap <A-o> <Cmd>lua require'jdtls'.organize_imports()<CR>
+nnoremap crv <Cmd>lua require('jdtls').extract_variable()<CR>
+vnoremap crv <Esc><Cmd>lua require('jdtls').extract_variable(true)<CR>
+nnoremap crc <Cmd>lua require('jdtls').extract_constant()<CR>
+vnoremap crc <Esc><Cmd>lua require('jdtls').extract_constant(true)<CR>
+vnoremap crm <Esc><Cmd>lua require('jdtls').extract_method(true)<CR>
+nnoremap <leader>df <Cmd>lua require'jdtls'.test_class()<CR>
+nnoremap <leader>dn <Cmd>lua require'jdtls'.test_nearest_method()<CR>
+
+command! -buffer -nargs=? -complete=custom,v:lua.require'jdtls'._complete_compile JdtCompile lua require('jdtls').compile(<f-args>)
+command! -buffer -nargs=? -complete=custom,v:lua.require'jdtls'._complete_set_runtime JdtSetRuntime lua require('jdtls').set_runtime(<f-args>)
+command! -buffer JdtUpdateConfig lua require('jdtls').update_project_config()
+command! -buffer JdtJol lua require('jdtls').jol()
+command! -buffer JdtBytecode lua require('jdtls').javap()
+command! -buffer JdtJshell lua require('jdtls').jshell()
+
+" lsp-config
+lua require("lsp-config")
